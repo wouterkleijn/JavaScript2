@@ -1,3 +1,6 @@
+'use strict';
+
+
 const bookNames = [
   //'harry_potter_chamber_of_secrets',
   'congo',
@@ -6,7 +9,6 @@ const bookNames = [
   'the_future_of_freedom',
   //'between_the_world_and_me',
 ];
-
 
 const bookData = {
   "the_future_of_freedom": {
@@ -21,8 +23,8 @@ const bookData = {
   }
 };
 
-for (const i in bookNames) {
-  const book = bookData[i];
+for (let i = 0; i < bookNames.length; i++) {
+  const book = bookData[bookNames[i]];
   const ul = document.getElementById("bookTitles");
   const li = document.createElement('li');
   li.innerHTML = book.title;
